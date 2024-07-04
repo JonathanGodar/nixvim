@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   plugins = {
-    lsp-lines = {enable = true;};
+    # lsp-lines = {enable = true;};
     lsp-format = {enable = true;};
     helm = {enable = true;};
     lsp = {
@@ -9,7 +9,11 @@
         html = {enable = true;};
         lua-ls = {enable = true;};
         nil-ls = {enable = true;};
-        rust-analyzer = {enable = true;};
+        rust-analyzer = {
+          enable = true;
+          installRustc = false;
+          installCargo = false;
+        };
         marksman = {enable = true;};
         pyright = {enable = true;};
         gopls = {enable = true;};

@@ -50,5 +50,6 @@ _: {
     ./plugins/utils/flash.nix
     ./plugins/utils/tmux-navigator.nix
     ./plugins/utils/harpoon.nix
+    ./plugins/utils/oil.nix
   ];
 }
