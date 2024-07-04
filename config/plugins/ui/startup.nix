@@ -1,4 +1,5 @@
 {
+  # Disabled
   plugins.startup = {
     enable = true;
 

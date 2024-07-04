@@ -13,17 +13,16 @@
       enable = true;
       lookahead = true;
       keymaps = {
-        "aa" = "@parameter.outer";
-        "ia" = "@parameter.inner";
+        "ap" = "@parameter.outer";
+        "ip" = "@parameter.inner";
         "af" = "@function.outer";
         "if" = "@function.inner";
-        "ac" = "@class.outer";
-        "ic" = "@class.inner";
-        "ii" = "@conditional.inner";
-        "ai" = "@conditional.outer";
+        "ic" = "@conditional.inner";
+        "ac" = "@conditional.outer";
         "il" = "@loop.inner";
         "al" = "@loop.outer";
-        "at" = "@comment.outer";
+        "a#" = "@comment.outer";
+        "i#" = "@comment.inner";
       };
     };
     move = {

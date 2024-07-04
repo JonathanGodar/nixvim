@@ -9,6 +9,7 @@
         html = {enable = true;};
         lua-ls = {enable = true;};
         nil-ls = {enable = true;};
+        rust-analyzer = {enable = true;};
         marksman = {enable = true;};
         pyright = {enable = true;};
         gopls = {enable = true;};

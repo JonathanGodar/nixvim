@@ -1,4 +1,5 @@
 {
+  # Currently disabled
   plugins.mini = {
     enable = true;
 
