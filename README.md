@@ -1,6 +1,6 @@
 # NixVim Configuration
 
-This repository contains my personal configuration NixVim, a Neovim configuration managed with Nix.
+This repository contains my nixvim configuration. This is a slightly modified version of [dj-tec's config](https://github.com/dc-tec/nixvim). There is also some code taken from [kickstart-nix.nvim](https://github.com/nix-community/kickstart-nix.nvim).
 
 ## General Configuration
 
@@ -55,15 +55,17 @@ This repository contains my personal configuration NixVim, a Neovim configuratio
 - `telescope.nix`: Configures the Telescope plugin for fuzzy finding and picking.
 - `whichkey.nix`: Configures the WhichKey plugin for displaying key mappings.
 - `extra_plugins.nix`: Configures additional plugins.
-- `mini.nix`: Configures the Mini plugin.
 - `obsidian.nix`: Confiugres the Obsidian plugin, for note-taking purposes.
 - `markdown-preview.nix`: Configures the Markdown Preview plugin.
+- `oil.nix`: A nice way to make changes to the "filesystem"
+- `harpoon.nix`: Quickly go to the file you want to be in
+- `flash.nix`: Makes navigation within a file quick.
 
 Please refer to the individual `.nix` files for more detailed configuration information.
 
 ## References
 
-This configuration has taken inspiration from the following contributors.
+This original configuration by `dj-tec` has taken inspiration from the following contributors.
 
 - [Elythh](https://github.com/elythh/nixvim)
 - [MikaelFangel](https://github.com/MikaelFangel/nixvim-config)
