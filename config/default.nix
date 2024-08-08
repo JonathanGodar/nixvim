@@ -38,6 +38,7 @@ _: {
 
     # Git
     ./plugins/git/lazygit.nix
+    ./plugins/git/diffview.nix
     ./plugins/git/gitsigns.nix
 
     # Utils
