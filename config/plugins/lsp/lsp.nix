@@ -20,7 +20,7 @@
         terraformls = {enable = true;};
         tsserver = {enable = true;};
         ansiblels = {enable = true;};
-        java-language-server = {enable = true;};
+        jdt-language-server = {enable = true;};
         jsonls = {enable = true;};
         helm-ls = {
           enable = true;
