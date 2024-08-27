@@ -92,7 +92,12 @@
             action = "rename";
             desc = "Rename";
           };
+          "<leader>ca" = {
+            action = "code_action";
+            desc = "Code action";
+          };
         };
+
         diagnostic = {
           "<leader>cd" = {
             action = "open_float";
