@@ -2,8 +2,8 @@
   plugins = {
     bufferline = {
       enable = true;
+      settings = {
       diagnostics = "nvim_lsp";
-      mode = "buffers";
 
       closeIcon = " ";
       bufferCloseIcon = "󰱝 ";
@@ -17,6 +17,7 @@
           text_align = "left";
         }
       ];
+     };
     };
   };
   keymaps = [

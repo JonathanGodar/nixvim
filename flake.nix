@@ -11,6 +11,11 @@
     pre-commit-hooks = {
       url = "github:cachix/pre-commit-hooks.nix";
     };
+
+    typst-preview = {
+      url = "github:chomosuke/typst-preview.nvim";
+      flake = false;
+    };
   };
 
   outputs = {
@@ -32,6 +37,7 @@
       }: let
         nixvim' = nixvim.legacyPackages.${system};
         nvim = nixvim'.makeNixvimWithModule {
+          extraSpecialArgs = { inherit inputs; };
           inherit pkgs;
           module = ./config;
         };

@@ -1,7 +1,7 @@
 _: {
   plugins.todo-comments = {
     enable = true;
-    colors = {
+    settings.colors = {
       error = ["DiagnosticError" "ErrorMsg" "#ED8796"];
       warning = ["DiagnosticWarn" "WarningMsg" "#EED49F"];
       info = ["DiagnosticInfo" "#EED49F"];

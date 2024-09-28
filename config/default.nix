@@ -1,15 +1,15 @@
-_: {
+{pkgs, inputs, ...}: {
   imports = [
     # General Configuration
     ./settings.nix
     ./keymaps.nix
     ./auto_cmds.nix
-    ./file_types.nix
 
     # Themes
     ./plugins/themes/default.nix
 
     # Completion
+
     ./plugins/cmp/cmp.nix
     ./plugins/cmp/cmp-copilot.nix
     ./plugins/cmp/lspkind.nix
@@ -30,8 +30,7 @@ _: {
     ./plugins/ui/bufferline.nix
     ./plugins/ui/lualine.nix
     # ./plugins/ui/startup.nix
-
-    # LSP and formatting
+# LSP and formatting
     ./plugins/lsp/lsp.nix
     ./plugins/lsp/conform.nix
     ./plugins/lsp/fidget.nix
@@ -53,4 +52,10 @@ _: {
     ./plugins/utils/harpoon.nix
     ./plugins/utils/oil.nix
   ];
+
+  extraPlugins = [(pkgs.vimUtils.buildVimPlugin {
+      name = "typst-preview.nvim";
+      src = inputs.typst-preview;
+  })];
+
 }

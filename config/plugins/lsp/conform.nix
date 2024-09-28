@@ -41,42 +41,43 @@
       '';
     plugins.conform-nvim = {
       enable = true;
+      # settings = {
+      #   format_on_save.lsp_format = "prefer";
+      # };
+      settings.format_on_save = ''
+        function(bufnr)
+          if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
+            return
+          end
+
+          if slow_format_filetypes[vim.bo[bufnr].filetype] then
+            return
+          end
+
+          local function on_format(err)
+            if err and err:match("timeout$") then
+              slow_format_filetypes[vim.bo[bufnr].filetype] = true
+            end
+          end
+
+          return { timeout_ms = 200, lsp_fallback = true }, on_format
+         end
+      '';
+
+      settings.format_after_save = ''
+        function(bufnr)
+          if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
+            return
+          end
+
+          if not slow_format_filetypes[vim.bo[bufnr].filetype] then
+            return
+          end
+
+          return { lsp_fallback = true }
+        end
+      '';
       settings = {
-        format_on_save.lsp_format = "prefer";
-      };
-      # formatOnSave = ''
-      #   function(bufnr)
-      #     if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
-      #       return
-      #     end
-      #
-      #     if slow_format_filetypes[vim.bo[bufnr].filetype] then
-      #       return
-      #     end
-      #
-      #     local function on_format(err)
-      #       if err and err:match("timeout$") then
-      #         slow_format_filetypes[vim.bo[bufnr].filetype] = true
-      #       end
-      #     end
-      #
-      #     return { timeout_ms = 200, lsp_fallback = true }, on_format
-      #    end
-      # '';
-      #
-      # formatAfterSave = ''
-      #   function(bufnr)
-      #     if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
-      #       return
-      #     end
-      #
-      #     if not slow_format_filetypes[vim.bo[bufnr].filetype] then
-      #       return
-      #     end
-      #
-      #     return { lsp_fallback = true }
-      #   end
-      # '';
       notifyOnError = true;
       formattersByFt = {
         html = [
@@ -160,12 +161,10 @@
         shellharden = {
           command = "${lib.getExe pkgs.shellharden}";
         };
-        bicep = {
-          command = "${lib.getExe pkgs.bicep}";
+        yamlfmt = {
+         command = "${lib.getExe pkgs.yamlfmt}";
         };
-        #yamlfmt = {
-        #  command = "${lib.getExe pkgs.yamlfmt}";
-        #};
+      };
       };
     };
   };

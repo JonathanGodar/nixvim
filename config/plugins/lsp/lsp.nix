@@ -14,6 +14,7 @@
           installRustc = false;
           installCargo = false;
         };
+        typst-lsp = {enable = true;};
         marksman = {enable = true;};
         pyright = {enable = true;};
         gopls = {enable = true;};
