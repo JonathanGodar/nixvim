@@ -29,8 +29,9 @@
     # UI plugins
     ./plugins/ui/bufferline.nix
     ./plugins/ui/lualine.nix
-    # ./plugins/ui/startup.nix
-# LSP and formatting
+    ./plugins/ui/rainbow-delimiters.nix
+
+    # LSP and formatting
     ./plugins/lsp/lsp.nix
     ./plugins/lsp/conform.nix
     ./plugins/lsp/fidget.nix
