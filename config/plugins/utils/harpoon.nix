@@ -29,5 +29,5 @@
       action.__raw = "function() harpoon:list():select(${toString (idx + 1)}) end";
       options.desc = ''Go to mark ${toString (idx + 1)} of harpoon'';
     })
-    10;
+    9;
 }
