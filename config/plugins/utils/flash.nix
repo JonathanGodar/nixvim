@@ -6,7 +6,7 @@ _: {
   };
   keymaps = [
     {
-      mode = ["n"];
+      mode = ["n" "o"];
       key = "s";
       action.__raw = "function() require(\"flash\").jump() end";
     }
