@@ -12,6 +12,8 @@
       url = "github:cachix/pre-commit-hooks.nix";
     };
 
+    neovim-nightly.url =  "github:nix-community/neovim-nightly-overlay";
+
     typst-preview = {
       url = "github:chomosuke/typst-preview.nvim";
       flake = false;

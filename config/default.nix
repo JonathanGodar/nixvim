@@ -56,9 +56,11 @@
     ./plugins/utils/oil.nix
   ];
 
-  extraPlugins = [(pkgs.vimUtils.buildVimPlugin {
-      name = "typst-preview.nvim";
-      src = inputs.typst-preview;
-  })];
-
+  config = {
+    extraPlugins = [(pkgs.vimUtils.buildVimPlugin {
+        name = "typst-preview.nvim";
+        src = inputs.typst-preview;
+    })];
+    package = inputs.neovim-nightly.packages.${pkgs.system}.default;
+  };
 }
