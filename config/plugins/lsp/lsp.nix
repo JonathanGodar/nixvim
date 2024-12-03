@@ -7,23 +7,22 @@
       enable = true;
       servers = {
         html = {enable = true;};
-        lua-ls = {enable = true;};
-        nil-ls = {enable = true;};
-        rust-analyzer = {
+        lua_ls = {enable = true;};
+        nil_ls = {enable = true;};
+        rust_analyzer = {
           enable = true;
           installRustc = false;
           installCargo = false;
         };
-        typst-lsp = {enable = true;};
+        typst_lsp = {enable = true;};
         marksman = {enable = true;};
         pyright = {enable = true;};
         gopls = {enable = true;};
         terraformls = {enable = true;};
-        tsserver = {enable = true;};
         ansiblels = {enable = true;};
-        jdt-language-server = {enable = true;};
+        jdtls = {enable = true;};
         jsonls = {enable = true;};
-        helm-ls = {
+        helm_ls = {
           enable = true;
           extraOptions = {
             settings = {
