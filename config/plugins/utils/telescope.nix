@@ -11,6 +11,11 @@
     };
     settings = {
       defaults = {
+         pickers = {
+          find_files = {
+            hidden = true;
+          };
+        };
         layout_config = {
           horizontal = {
             prompt_position = "top";
